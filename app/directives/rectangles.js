@@ -56,11 +56,15 @@ angular.module('myApp')
 					  var ylinearScale = d3.scale.linear()
                             .domain([0,max_y])
                             .range([0,100]);
-				  //to (using the new max_x and max_y variables)
-					 var svgContainer = d3.select("body").append("svg")
+				  //to (using the new max_x and max_y variables
+				  
+				     var rootElement = d3.select(element[0]).select("div")
+					 rootElement.selectAll("*").remove();
+					 var svgContainer = rootElement.append("svg")
 														 .attr("width", xlinearScale(max_x ) + 20)
 														 .attr("height", ylinearScale(max_y) + 20)
-														 .style("border", "1px solid black");
+														 .style("border", "1px solid black")
+														 .classed("svgContainer", true);
 					//Note - we add 20 units to the max_x and max_y to give the elements some stylistic room
 														 
 					 
@@ -74,7 +78,8 @@ angular.module('myApp')
 											  .attr("y", function (d) { return ylinearScale(d.y_axis); })
 											  .attr("height", function (d) { return d.height; })
 											  .attr("width", function (d) { return d.width; })
-											  .style("fill", function(d) { return d.color; });
+											  .style("fill", function(d) { return d.color; })
+											  .classed("rectangle", true);
 									  
 				  
 				});
