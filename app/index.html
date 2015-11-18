@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Hello World, AngularJS </title>
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+ 
+		<script type="text/javascript"
+        src="service/rectanglesvc.js"></script>
+		<script type="text/javascript"
+        src="service/d3svc.js"></script>
+		<script type="text/javascript"
+        src="directives/rectangles.js"></script>
+		 <script type="text/javascript"
+        src="controllers/controller.js"></script>
+		
+
+</head>
+<body ng-controller="Controller">
+   <button class="btn"
+        ng-click="draw()"
+        >Draw rectangles</button>
+   <rectangles data="jsonRectangles"/>
+ 
+</div>
+</body>
+</html>
