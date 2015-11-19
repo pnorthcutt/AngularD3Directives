@@ -21,7 +21,7 @@ angular.module('myApp')
 					var drag = d3.behavior.drag()
 					.on("drag", function(d,i) {
 						console.log(d)
-						console.log(this.parentNode.attr("width"))
+						
 						d.start += d3.event.dx
 						d.end += d3.event.dx
 						d3.select(this).attr("transform", function(d,i){
