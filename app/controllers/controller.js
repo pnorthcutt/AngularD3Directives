@@ -7,7 +7,10 @@ angular.module('myApp')
 		$scope.jsonRectangles=ShapeData.getjsonRectangles();
 		
 	}  
-    
+        $scope.drawTimeline= function(){
+		
+		$scope.time=TimelineData.getDayTimeline();
+	}
 	
   }
   
