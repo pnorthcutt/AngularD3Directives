@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-    <title>Hello World, AngularJS </title>
+    <title>D3, AngularJS </title>
     <script type="text/javascript"
         src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
  
 		<script type="text/javascript" src="service/rectanglesvc.js"></script>
 		<script type="text/javascript" src="service/timelinesvc.js"></script>
+		<script type="text/javascript" src="service/collisionsvc.js"></script>
+		
 		<script type="text/javascript" src="service/d3svc.js"></script>
 		<script type="text/javascript" src="directives/rectangles.js"></script>
 		<script type="text/javascript" src="directives/dayTimeline.js"></script>
+		<script type="text/javascript" src="directives/collisions.js"></script>
 		<script type="text/javascript" src="controllers/controller.js"></script>
 		
 
 </head>
 <body ng-controller="Controller">
+
 	<div>
 		<button class="btn" id="drawRecButton" ng-click="draw()">Draw rectangles</button>
 		<rectangles id="rectangles" data="jsonRectangles"/>
@@ -22,6 +26,10 @@
    <div>
 		 <button class="btn" id="drawtimeline" ng-click="drawTimeline()">Draw hours</button>
 		 <daytl id="dayTimeline" data="time"/>
+ </div>
+ <div>
+		 <button class="btn" id="collisions" ng-click="showCollision()">show collisions</button>
+		 <test id="collisionTest" data="collisionD"/>
  </div>
 </div>
 </body>
