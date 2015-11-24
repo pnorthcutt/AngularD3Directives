@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="directives/dayTimeline.js"></script>
 		<script type="text/javascript" src="directives/collisions.js"></script>
 		<script type="text/javascript" src="directives/quadtree.js"></script>
+		<script type="text/javascript" src="directives/brushtooltip.js"></script>
 		<script type="text/javascript" src="controllers/controller.js"></script>
 		<style>
 
@@ -64,7 +65,11 @@
  </div>
   <div>
 		 <button class="btn" id="quadtree" ng-click="showDistance()">show distance</button>
-		 <qtree id="collisionTest" data="distanceD"/>
+		 <qtree  data="distanceD"/>
+ </div>
+ <div>
+		 <button class="btn" id="brushtooltip" ng-click="showBrush()">show brush and tooltip</button>
+		 <brushtt  data="brushttD"/>
  </div>
 </div>
 </body>
