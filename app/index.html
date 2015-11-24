@@ -13,8 +13,39 @@
 		<script type="text/javascript" src="directives/rectangles.js"></script>
 		<script type="text/javascript" src="directives/dayTimeline.js"></script>
 		<script type="text/javascript" src="directives/collisions.js"></script>
+		<script type="text/javascript" src="directives/quadtree.js"></script>
 		<script type="text/javascript" src="controllers/controller.js"></script>
-		
+		<style>
+
+		.point {
+		  fill: #999;
+		  stroke: #fff;
+		}
+
+		.point.scanned {
+		  fill: orange;
+		  fill-opacity: 1;
+		  stroke: brown;
+		}
+
+		.point.selected {
+		  fill: red;
+		  fill-opacity: 1;
+		}
+
+		.node {
+		  fill: none;
+		  stroke: #ccc;
+		  shape-rendering: crispEdges;
+		}
+		  
+		.brush .extent {
+		  stroke: #fff;
+		  fill-opacity: .125;
+		  shape-rendering: crispEdges;
+		}
+
+		</style>
 
 </head>
 <body ng-controller="Controller">
@@ -30,6 +61,10 @@
  <div>
 		 <button class="btn" id="collisions" ng-click="showCollision()">show collisions</button>
 		 <test id="collisionTest" data="collisionD"/>
+ </div>
+  <div>
+		 <button class="btn" id="quadtree" ng-click="showDistance()">show distance</button>
+		 <qtree id="collisionTest" data="distanceD"/>
  </div>
 </div>
 </body>

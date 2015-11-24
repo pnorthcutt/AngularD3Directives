@@ -8,9 +8,9 @@ angular.module('myApp')
 		data:'=data'
 	},
 	  link: function postLink(scope, element, attrs){
-		  console.log("test")
+		  
 		  scope.$watch('data', function(newValue, oldValue) {
-			  console.log("hello")
+			 
 			    if(newValue!==oldValue)
 				{
 					

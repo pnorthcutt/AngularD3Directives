@@ -16,6 +16,11 @@ angular.module('myApp')
 		$scope.collisionD=CollisionData.getCollision();
 		
 	}
+	$scope.showDistance= function(){
+		
+		$scope.distanceD=CollisionData.getCollision();
+		console.log("setting distanceD:",$scope.distanceD)
+	}
 	
   }
   
