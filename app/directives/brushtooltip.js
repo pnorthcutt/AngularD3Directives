@@ -83,7 +83,7 @@ angular.module('myApp')
 
 				var data = [];
 				var values = [];
-				for (var i = 2; i <= 50; i++) {
+				for (var i = 2; i <= 10; i++) {
 					var val = Math.floor(Math.random() * (50 - 5 + 1) + 5);
 					data.push({index: i, value: val});
 					values.push(val);
@@ -200,6 +200,7 @@ angular.module('myApp')
 				function transition_data() {
 				  svg.selectAll(".point")
 					.data(data)
+					
 				  .transition()
 					.duration(500)
 					.attr("cx", function(d) { return x(d.index); });

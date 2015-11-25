@@ -22,7 +22,7 @@ angular.module('myApp')
 			var width = 960,
 				height = 500;
 
-			var data = d3.range(2).map(function() {
+			var data = d3.range(10).map(function() {
 			  return [Math.random() * width, Math.random() * height];
 			});
 

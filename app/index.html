@@ -8,9 +8,12 @@
 		<script type="text/javascript" src="service/rectanglesvc.js"></script>
 		<script type="text/javascript" src="service/timelinesvc.js"></script>
 		<script type="text/javascript" src="service/collisionsvc.js"></script>
+		<script type="text/javascript" src="service/flosvc.js"></script>
 		
 		<script type="text/javascript" src="service/d3svc.js"></script>
 		<script type="text/javascript" src="directives/rectangles.js"></script>
+		<script type="text/javascript" src="directives/forceLayout1.js"></script>
+		<script type="text/javascript" src="directives/forceLayout2.js"></script>
 		<script type="text/javascript" src="directives/dayTimeline.js"></script>
 		<script type="text/javascript" src="directives/collisions.js"></script>
 		<script type="text/javascript" src="directives/quadtree.js"></script>
@@ -39,7 +42,10 @@
 		  stroke: #ccc;
 		  shape-rendering: crispEdges;
 		}
-		  
+		.link {
+			stroke: #777;
+			stroke-width: 2px;
+		}  
 		.brush .extent {
 		  stroke: #fff;
 		  fill-opacity: .125;
@@ -70,6 +76,14 @@
  <div>
 		 <button class="btn" id="brushtooltip" ng-click="showBrush()">show brush and tooltip</button>
 		 <brushtt  data="brushttD"/>
+ </div>
+ <div>
+		 <button class="btn"  ng-click="demoFL1()">demo force layout 1</button>
+		 <forceLO1  data="forceLO1D"/>
+ </div>
+  <div>
+		 <button class="btn"  ng-click="demoFL2()">demo force layout 2</button>
+		 <forceLO2  data="forceLO2D"/>
  </div>
 </div>
 </body>

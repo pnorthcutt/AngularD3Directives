@@ -22,7 +22,7 @@ angular.module('myApp')
 				var width = 960,
 					height = 500;
 
-				var nodes = d3.range(5).map(function() { return {radius: Math.random() * 12 + 4}; }),
+				var nodes = d3.range(100).map(function() { return {radius: Math.random() * 12 + 4}; }),
 					root = nodes[0],
 					color = d3.scale.category10();
 
